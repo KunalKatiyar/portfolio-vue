@@ -5,10 +5,10 @@
     <carousel-3d :controls-visible="true" :clickable="false" :width="600" :height="450" class="carousel">
       <slide v-for="(slide,i) in slides" v-bind:key="slide.id" :index="i"  class=" bg-white">
         <div>
-          <h1 class="text-center text-xl font-bold mt-2 mb-4"><span class="rounded-full border p-1 px-3 bg-blue-200">{{ slide.name }}</span></h1>
-          <img class="mt-1" v-bind:src="slide.img" alt="slide.name">
-          <h1 class="text-center mt-4 mb-4"><span class="rounded-lg border p-1 px-2 bg-blue-200">{{ slide.title }}</span></h1>
-          <a v-bind:href="slide.link"><h2 class="text-center mt-1"><span class="border-l-2 border-r-2 border-blue-500 px-1">{{ slide.link }}</span></h2></a>
+          <h1 class="text-xs md:text-xl smallmobile:mb-2 text-center font-bold mb-2 md:mt-2 md:mb-4"><span class="rounded-full border p-1 px-3 bg-blue-200">{{ slide.name }}</span></h1>
+          <img class="md:mt-1" v-bind:src="slide.img" alt="slide.name">
+          <h6 class="text-center md:mt-4 md:mb-4"><span class="text-k md:text-base md:rounded-lg md:border md:p-1 md:px-2 md:bg-blue-200">{{ slide.title }}</span></h6>
+          <a v-bind:href="slide.link"><h2 class="text-center md:mt-1"><span class="text-k md:text-base md:border-l-2 md:border-r-2 md:border-blue-500 md:px-1">{{ slide.link }}</span></h2></a>
           <h2></h2>
         </div>
       </slide>

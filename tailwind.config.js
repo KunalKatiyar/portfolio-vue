@@ -16,7 +16,8 @@ module.exports = {
         ...breakpoints(theme('screens')),
       }),
       fontSize:{
-        f: '0.7rem'
+        f: '0.7rem',
+        k: '0.35rem'
       }
     },
   },
