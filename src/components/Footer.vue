@@ -1,5 +1,5 @@
 <template>
-    <div class="flex mb-4 border-t-2 border-gray-500 mt-12">
+    <div class="flex mb-4  mt-12">
         <div class="w-2/3 smallmobile:w-3/5 nice:w-1/2">
           <h2 class="mt-4 ml-2 nice:mt-4 font-bold">Navigation: </h2>
           <div class="text-f smallmobile:text-xs md:text-base flex mobile:ml-2 nice:ml-4 mobile:flex mt-4 nice:mt-8">

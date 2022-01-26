@@ -10,7 +10,7 @@
           About Me
         </div>
         <p class="text-gray-700 text-base">
-          Hello, my name is Kunal Katiyar, a third year undergraduate student of IIT Kharagpur, enrolled in its course of Chemical Enginnering. 
+          Hey there, Kunal here! I'm a fourth year undergraduate student of IIT Kharagpur, enrolled in its course of Chemical Enginnering. 
         </p>
       </div>
     </div>
