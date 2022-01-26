@@ -4,7 +4,7 @@
     <img class="w-64 h-64 m-auto mt-16 border-4 border-gray-300 shadow-md hover:shadow-xl" src="../assets/Kunal.jpg" alt="Kunal">
   </div>
   <div class="flex-row lg:flex">
-    <div class="max-w-supersm smallmobile:max-w-xs mobile:max-w-sm rounded overflow-hidden shadow-lg m-auto hover:shadow-2xl mt-16 border-gray-400 hover:border-gray-800 border-2">
+    <div class="max-w-supersm smallmobile:max-w-xs mobile:max-w-sm rounded overflow-hidden shadow-lg m-auto hover:shadow-2xl mt-16 border-gray-400 hover:border-gray-800 border-2 bg-gray-100">
       <div class="px-3 py-2 sm:px-6 sm:py-4">
         <div class="font-bold m-auto text-xl mb-2">
           About Me
@@ -14,7 +14,7 @@
         </p>
       </div>
     </div>
-    <div class="max-w-supersm smallmobile:max-w-xs mobile:max-w-sm rounded overflow-hidden shadow-lg m-auto hover:shadow-2xl mt-16 border-gray-400 hover:border-gray-800 border-2">
+    <div class="max-w-supersm smallmobile:max-w-xs mobile:max-w-sm rounded overflow-hidden shadow-lg m-auto hover:shadow-2xl mt-16 border-gray-400 hover:border-gray-800 border-2 bg-gray-100">
       <div class="px-3 py-2 sm:px-6 sm:py-4">
         <div class="font-bold m-auto text-xl mb-2">
           Interests
@@ -24,7 +24,7 @@
         </p>
       </div>
     </div>
-    <div class="max-w-supersm smallmobile:max-w-xs mobile:max-w-sm rounded overflow-hidden shadow-lg m-auto hover:shadow-2xl mt-16 border-gray-400 hover:border-gray-800 border-2">
+    <div class="max-w-supersm smallmobile:max-w-xs mobile:max-w-sm rounded overflow-hidden shadow-lg m-auto hover:shadow-2xl mt-16 border-gray-400 hover:border-gray-800 border-2 bg-gray-100">
       <div class="px-3 py-2 sm:px-6 sm:py-4">
         <div class="font-bold m-auto text-xl mb-2">
           About this Website
