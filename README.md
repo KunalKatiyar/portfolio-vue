@@ -1,24 +1,20 @@
-# portfolio-vue
+# Portfolio Page
 
-## Project setup
-```
-npm install
-```
+![image](https://user-images.githubusercontent.com/11738485/151189700-52e31cda-eac9-4232-a3a1-3e840e2bb389.png)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Major Pages
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. HomePage
+2. Projects
+3. Contact
+4. Blog (To-do)
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Dev Stack
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Vue.js
+- Nodejs
+- Firebase (For Hosting)
+
+### Latest Addition
+
+-> Addition of a threejs animated background to the website
