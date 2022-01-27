@@ -3,7 +3,7 @@
     <h1 class="ml-4 text-2xl font-bold mb-4">Contact Me!</h1>
     <div class="sm:flex justify-center">
       <div class="m-auto">
-        <form class="contact-form" @submit.prevent="sendEmail">
+        <form class="contact-form bg-white" @submit.prevent="sendEmail">
           <div class="form-group">
               <label for="msg-name">Email</label>
               <input type="text" id="msg-name" class="form-control" name="email">

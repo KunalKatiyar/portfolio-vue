@@ -6,7 +6,7 @@
         </div>
         <div class="flex justify-end w-5/6 nice:w-1/2 mt-4 text-sm md:text-xl font-bold text-gray-700">
             <router-link class="px-2 sm:px-4" to="/">Home</router-link>
-            <router-link class="px-2 sm:px-4" to="/ProjectsSkills">Projects & Skills</router-link>
+            <router-link class="px-2 sm:px-4" to="/ProjectsSkills">Projects</router-link>
             <!-- <router-link class="px-2 sm:px-4" to="/Blog">Blog</router-link> -->
             <router-link class="px-2 sm:px-4" to="/Contact">Contact</router-link>
         </div>

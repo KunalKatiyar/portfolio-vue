@@ -2,31 +2,29 @@
 <div>
   <h1 class="ml-4 text-2xl font-bold">Projects</h1>
   <div class="m-auto mt-8 w-3/4">
-    <carousel-3d :controls-visible="true" :clickable="false" :width="600" :height="450" class="carousel">
-      <slide v-for="(slide,i) in slides" v-bind:key="slide.id" :index="i"  class=" bg-white">
-        <div>
-          <h1 class="text-xs md:text-xl smallmobile:mb-2 text-center font-bold mb-2 md:mt-2 md:mb-4"><span class="rounded-full border p-1 px-3 bg-blue-200">{{ slide.name }}</span></h1>
-          <img class="md:mt-1" v-bind:src="slide.img" alt="slide.name">
-          <h6 class="text-center sm:mt-4 sm:mb-2 md:mt-4 md:mb-4"><span class="text-k mobile:text-base md:rounded-lg md:border mobile:p-1 mobile:px-2 md:bg-blue-200">{{ slide.title }}</span></h6>
-          <a v-bind:href="slide.link"><h2 class="text-center md:mt-1"><span class="text-k mobile:text-base md:border-l-2 md:border-r-2 md:border-blue-500 mobile:px-1">{{ slide.link }}</span></h2></a>
-          <h2></h2>
-        </div>
+    <carousel-3d :controls-visible="true" :clickable="false" :width="600" :height="350" class="carousel bg-white" @after-slide-change="onAfterSlideChange">
+      <slide v-for="(slide,i) in slides" v-bind:key="slide.id" :index="i" class = "bg-white shadow-md border-solid border-gray-700">
+        <a v-bind:href="slide.link">
+          <div class="bg-white w-full h-full" >
+            <img class="md:mt-1" v-bind:src="slide.img" alt="slide.name">
+            <h1 class="text-xs md:text-xl smallmobile:mb-2 text-center font-bold mb-2 md:mt-6 md:mb-4"><span class="border-solid border-blue-500 p-1 px-3 bg-blue-300 border b shadow-md">{{ slide.name }}</span></h1>
+            
+            <!-- <h6 class="text-center sm:mt-4 sm:mb-2 md:mt-4 md:mb-4"><span class="text-k mobile:text-base md:rounded-lg md:border mobile:p-1 mobile:px-2 md:bg-blue-200">{{ slide.title }}</span></h6>
+            <a v-bind:href="slide.link"><h2 class="text-center md:mt-1"><span class="text-k mobile:text-base md:border-l-2 md:border-r-2 md:border-blue-500 mobile:px-1">{{ slide.link }}</span></h2></a> -->
+            
+          </div>
+        </a>
       </slide>
     </carousel-3d>
   </div>
-  <div class="mt-2 border-t-2 border-gray-300">
-    <h1 class="mt-4 ml-4 text-2xl font-bold">Skills</h1>
-    <div class="text-center">
-      <ul class="sm:flex sm:mt-16 text-xl">
-        <li class="sm:w-1/3 mt-8"><span class="border-2 p-2 px-4 border-red-600 shadow-md hover:shadow-2xl">C/C++</span></li>
-        <li class="sm:w-1/3 mt-8"><span class="border-2 p-2 px-4 border-blue-600 shadow-md hover:shadow-2xl">Python</span></li>
-        <li class="sm:w-1/3 mt-8"><span class="border-2 p-2 px-4 border-green-600 shadow-md hover:shadow-2xl">HTML+CSS</span></li>
-      </ul>
-      <ul class="sm:flex sm:mt-16 text-xl">
-        <li class="sm:w-1/3 mt-8"><span class="border-2 p-2 px-4 border-yellow-600 shadow-md hover:shadow-2xl">Javascript</span></li>
-        <li class="sm:w-1/3 mt-8"><span class="border-2 p-2 px-4 border-purple-600 shadow-md hover:shadow-2xl">Game Development</span></li>
-        <li class="sm:w-1/3 mt-8"><span class="border-2 p-2 px-4 border-orange-600 shadow-md hover:shadow-2xl">Network Security</span></li>
-      </ul>
+  <div class="max-w-2xl justify-center theBox m-auto smallmobile:max-w-xs mobile:max-w-2xl rounded overflow-hidden shadow-lg hover:shadow-2xl border-gray-400 hover:border-gray-800 border-2 bg-gray-100">
+    <div class="px-3 py-2 sm:px-6 sm:py-4 justify-center">
+      <div class="font-bold m-auto text-xl mb-2 text-center">
+        {{ slides[indexValue].name }}
+      </div>
+      <p class="text-gray-700 text-base text-center">
+        {{ slides[indexValue].title }}
+      </p>
     </div>
   </div>
 </div>
@@ -36,6 +34,7 @@
 export default {
   data() {
     return {
+      indexValue: 0,
       slides: [
         {
           id: 0,
@@ -68,11 +67,20 @@ export default {
       ]
     };
   },
+  methods: {
+    onAfterSlideChange(index) {
+      this.indexValue = index;
+    },
+  }
 }
 </script>
 
 <style scoped>
 .carousel{
   background-color: white;
+}
+
+.theBox{
+  min-width: 50%;
 }
 </style>

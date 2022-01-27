@@ -4,7 +4,7 @@
           <h2 class="mt-4 ml-2 nice:mt-4 font-bold">Navigation: </h2>
           <div class="text-f smallmobile:text-xs md:text-base flex mobile:ml-2 nice:ml-4 mobile:flex mt-4 nice:mt-8">
             <router-link class="ml-2 mr-1 smallmobile:mr-1 mobile:mr-2 md:ml-4 md:text-base" to="/">Home</router-link>
-            <router-link class="mr-1 smallmobile:mr-1 mobile:mr-2 md:ml-4 md:text-base" to="/ProjectsSkills">Projects & Skills</router-link>
+            <router-link class="mr-1 smallmobile:mr-1 mobile:mr-2 md:ml-4 md:text-base" to="/ProjectsSkills">Projects</router-link>
             <!-- <router-link class="mr-1 smallmobile:mr-1 mobile:mr-2 md:ml-4 md:text-base" to="/Blog">Blog</router-link> -->
             <router-link class="mr-1 smallmobile:mr-1 mobile:mr-2 md:ml-4 md:text-base" to="/Contact">Contact</router-link>
           </div>
