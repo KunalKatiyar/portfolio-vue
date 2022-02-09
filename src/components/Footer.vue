@@ -32,8 +32,8 @@ import { VueBotUI } from 'vue-bot-ui'
 
 const { Configuration, OpenAIApi} = require('openai');
 const config = new Configuration({
-  organization: 'org-YqrcfqWhSyhkK9meNpnnsTLe',
-  apiKey: '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'
+  organization: process.env.VUE_APP_ORGANISATION_API,
+  apiKey: process.env.VUE_APP_API_KEY
 });
 const openai = new OpenAIApi(config);
 export default {
@@ -61,6 +61,7 @@ export default {
   },
   methods: {
     messageSendHandler: async function (msg) {
+      console.log(process.env.VUE_APP_ROOT_API)
       this.data.push({
         agent: 'user',
         type: 'text',
