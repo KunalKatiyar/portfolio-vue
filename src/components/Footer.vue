@@ -18,18 +18,88 @@
             <i class="fab fa-twitter ml-2 mobile:ml-4 nice:mr-16"></i>
           </div>
         </div>
+        <VueBotUI
+          :messages="data"
+          :options="botOptions"
+          :bot-typing="botValues.botTyping"
+          @msg-send="messageSendHandler"
+        />
     </div>
 </template>
 
 <script>
-export default {
+import { VueBotUI } from 'vue-bot-ui'
 
+const { Configuration, OpenAIApi} = require('openai');
+const config = new Configuration({
+  organization: 'org-YqrcfqWhSyhkK9meNpnnsTLe',
+  apiKey: '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'
+});
+const openai = new OpenAIApi(config);
+export default {
+  components: {
+    VueBotUI,
+  },
+  data () {
+    return {
+      data: [
+        {
+          agent: 'bot',
+          type: 'text',
+          text: 'Hello! How can I help you?',
+          disableInput: false,
+        }
+      ],
+      botOptions: {
+        botTitle: "QuestionBot (Made using GPT-3)",
+        botAvatarImg: "https://img.itch.zone/aW1nLzc1NzQ4NjgucG5n/80x80%23/6%2BUgd1.png"
+      },
+      botValues: {
+        botTyping: false,
+      }
+    }
+  },
+  methods: {
+    messageSendHandler: async function (msg) {
+      this.data.push({
+        agent: 'user',
+        type: 'text',
+        text: msg.text,
+      })
+      setTimeout(() => {
+        this.botValues.botTyping = true;
+      }, 1000)
+      //Do GPT Stuff and update data
+      const new_line = await openai.createCompletion('text-davinci-001', {
+        prompt: msg.text,
+        max_tokens:64
+      });
+      this.botValues.botTyping = false;
+      this.data.push({
+        agent: 'bot',
+        type: 'text',
+        text: new_line.data.choices[0].text,
+      })
+      // setTimeout(() => {
+      //   this.data.push({
+      //     agent: 'bot',
+      //     type: 'text',
+      //     text: 'I can help you with that. What is your name?',
+      //   })
+      //   this.botValues.botTyping = false;
+      // }, 1000);
+
+    }
+  }
 }
 </script>
 
 <style>
 .router-link-exact-active{
-    @apply border-b-2;
-    border-bottom: 3px solid red;
+  @apply border-b-2;
+  border-bottom: 3px solid red;
+}
+.qkb-msg-avatar{
+  margin-top: 0.4rem;
 }
 </style>
