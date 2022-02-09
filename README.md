@@ -18,3 +18,4 @@
 ### Latest Addition
 
 -> Addition of a threejs animated background to the website
+-> Added a ChatBot based on the NLP API of GPT-3
